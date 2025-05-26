@@ -49,6 +49,27 @@ int main(){
 	for( int i = 0; i < 8; i++  )
 		cout << arr1[i] << endl;
 	
+	//obtener en que direccion de memoria inicia y termina una variable
+	cout << "arr2 inicia en " << begin(arr2) << endl;
+	cout << "arr2 termina en " << end(arr2) << endl;
+	/*Para poder usar begin y end debe de configurar el compilador en la version 11
+	para ello se agrega el parametro: std=c++11 en la configuracion del compilador.*/
+	
+	//saber el tamaño de un arreglo:
+	cout << "Tamanio de arr2: " << end(arr2)-begin(arr2) << endl;
+	
+	for( int i = 0; i < end(arr2)-begin(arr2); i++ )
+		cout << arr2[i] << endl;
+		
+	//mas ejemplos:
+	float arr3[] = {5.67, 1.24, 3.1416, 2.9};
+	cout << "*******************************" << endl; 
+	for( int i = 0; i < end(arr3)-begin(arr3); i++ )
+		cout << arr3[i] << endl;
+	
+	//el resultado de restar end-begin se puede tambien almacenar en una variable int o long
+	int tamanio3 = end(arr3)-begin(arr3);
+	cout << "longitud de arr3: " << tamanio3 << endl;
 	
 	return 123;
 }
