@@ -55,6 +55,8 @@ int main(){
 	colores[3] = colores[3] + " hueso";
 	cout << "cuarto color despues: " << colores[3] << endl;
 	
+	
+	
 	return 111;
 }
 
