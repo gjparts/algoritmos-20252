@@ -52,8 +52,23 @@ int main(){
 	cout << "str: " << str << endl;
 	cout << "ll1: " << ll1 << endl;
 	
-	//cualquier numero a string
-	
+	//convertir cualquier numero a string
+	int e2 = 89;
+	float f2 = 56.7f;
+	double d2 = 7.897566;
+	long l2 = 1234123412;
+	long long ll2 = 9999999999999;
+	string s;
+	s = to_string(e2);
+	cout << e2 << " a string: " << s << endl;
+	s = to_string(f2);
+	cout << f2 << " a string: " << s << endl;
+	s = to_string(d2);
+	cout << d2 << " a string: " << s << endl;
+	s = to_string(l2);
+	cout << l2 << " a string: " << s << endl;
+	s = to_string(ll2);
+	cout << ll2 << " a string: " << s << endl;
 	
 	return 123;
 }
