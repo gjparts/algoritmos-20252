@@ -18,13 +18,16 @@ int main(){
 	 	
 	 	//recorrer el archivo linea por linea
 	 	string linea; //variable temporal
+	 	int contador = 0; //variable acumulador
 	 	while( archivo.eof() == false ){
 	 		//eof = end of file
 	 		//leer una linea del archivo y ponerla en una variable
 	 		getline(archivo,linea);
+	 		contador++; //sumar 1 al contador
 	 		cout << linea << endl; //si imprime cada linea leida el recorrido sera lento
 		 }
 		 cout << "Se ha terminado de leer el archivo." << endl;
+		 cout << "Se ha leido " << contador << " lineas" << endl;
 	 	
 		archivo.close(); //cerrar el archivo al terminar
 	 }
