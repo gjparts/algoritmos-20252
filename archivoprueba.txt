@@ -1,0 +1,4 @@
+Gerardo Portillo
+9
+El valor de x es 67
+Uva	Naranja	Sandia	Melon
