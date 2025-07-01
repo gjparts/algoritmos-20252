@@ -48,7 +48,20 @@ bool esMultiplo(int a, int b){
 	
 }
 
-
+/*4. Escriba una funcion que imprima un rectangulo de caracteres,
+dicha funcion recibira como parametros el ancho y largo del mismo
+asi como otro parametro con el caracter a usar para dibujar
+dicho rectangulo.*/
+void dibujarRectangulo(int ancho, int largo, char caracter){
+	//las funciones void no requieren de return (es opcional)
+	for( int i = 1; i <= largo; i++ ){
+		for( int j = 1; j <= ancho; j++ ){
+			cout << caracter;
+		}
+		
+		cout << endl; //nuevo renglon
+	}
+}
 
 
 

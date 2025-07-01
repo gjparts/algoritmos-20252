@@ -42,6 +42,17 @@ int main(){
 	suma = suma + ( y > x ); //suma true o 1
 	cout << "suma: " << suma << endl;
 	
+	//las funciones void (vacio) no retornan ningun valor.
+	//jamas asigne el resultado de una funcion void porque al ser
+	//funciones vacias no devuelven nada.
+	//lo siguiente no es posible, porque quiere enviar el resultado
+	//de una funcion void hacia un flujo de salida que espera un valor:
+	//cout << dibujarRectangulo(20,5,'X') << endl;
+	//tampoco se puede lo siguiente:
+	//string cuadro = dibujarRectangulo(20,5,'X');
+	//una funcion void solo se manda a llamar como subprograma:
+	dibujarRectangulo(20,5,'X');
+	dibujarRectangulo(5,8,'*');
 	
 	return 567;
 }
