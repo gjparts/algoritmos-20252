@@ -68,6 +68,15 @@ int main(){
 	cout << minimo(1.7,2.6,8.7) << endl;
 	cout << minimo(6.5f,9.9f,4.13453f) << endl;
 	
+	cout << enMayusculas("gato") << endl;
+	cout << enMayusculas("GATO") << endl;
+	cout << enMayusculas("Gato") << endl;
+	
+	cout << encontrarCaracter("Gerardo Portillo",'o') << endl;
+	cout << encontrarCaracter("UNAH",'a') << endl;
+	cout << encontrarCaracter("Sistemas",'m') << endl;
+	
+	
 	return 567;
 }
 

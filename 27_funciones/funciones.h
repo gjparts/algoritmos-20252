@@ -4,6 +4,7 @@
 //que vengan tambien las constantes como M_PI:
 #define _USE_MATH_DEFINES
 #include<cmath>
+#include<algorithm>
 using namespace std;
 
 /*1. Escriba una funcion llamada elevar que reciba
@@ -105,6 +106,43 @@ float minimo(float a, float b, float c){
 	double x = a, y = b, z = c;
 	return minimo(x,y,z);
 }
+
+/*7. Escriba una funcion que devuelva true si una cadena
+de texto esta escrita toda en mayusculas o false si no es así.*/
+bool enMayusculas(string str){
+	//comparar el string enviado con su version en mayusculas
+	string copia = str;
+	transform(copia.begin(), copia.end(), copia.begin(), ::toupper);
+	return (str == copia);
+}
+
+/*8. Escriba una funcion a la cual se le proporcione como
+parametros un caracter y una cadena de texto, dicha funcion
+debera devolver un entero con la posicion de la primer coincidencia
+en la que fue encontrado el caracter proporcionado dentro de
+la cadena de texto proporcionada, si el caracter no es
+encontrado entonces devolver -1.
+No tiene permitido utilizar la funcion find del string.*/
+int encontrarCaracter( string str, char buscado ){
+	for( int i = 0; i < str.length(); i++ ){
+		if( str[i] == buscado )
+			return i; //si este return ocurre entonces
+					  //se termina la estructura de repeticion
+					  //y se retorna la posicion i actual
+	}
+	//si llego aqui es porque recorrio todo el string
+	//y no encontro nada:
+	return -1;
+}
+
+/*9. Escriba una funcion que reciba como parametros un string y un
+arreglo de string, dicha funcion debera buscar el string proporcionado
+dentro arreglo, si la cadena es encontrada entonces la funcion
+retornara un numero entero con la posicion de la primer
+coincidencia en la que se encontró, si no se encuentra
+nada entonces retornar -1*/
+
+
 
 
 
