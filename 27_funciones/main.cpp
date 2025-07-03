@@ -54,6 +54,20 @@ int main(){
 	dibujarRectangulo(20,5,'X');
 	dibujarRectangulo(5,8,'*');
 	
+	/*El lenguaje C++ detecta o infiere dependiendo si lleva o no
+	los decimales, si lleva la letra f pues es float, si no lleva decimales
+	pues es int, si lleva la letra L entonces es Long.*/
+	cout << areaCirculo(6.0) << endl;
+	cout << areaCirculo(6.0f) << endl;
+	//lo anterior se ignora si el valor viene de una variable
+	//porque nosotros estamos remarcando el tipo de dato que viene
+	double radio1 = 40;
+	cout << areaCirculo(radio1) << endl;
+	
+	cout << minimo(3,1,8) << endl;
+	cout << minimo(1.7,2.6,8.7) << endl;
+	cout << minimo(6.5f,9.9f,4.13453f) << endl;
+	
 	return 567;
 }
 

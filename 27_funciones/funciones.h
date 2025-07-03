@@ -1,5 +1,8 @@
 #include<iostream>
 #include<stdexcept>
+//lo siguiente se pone antes de incluir cmath para
+//que vengan tambien las constantes como M_PI:
+#define _USE_MATH_DEFINES
 #include<cmath>
 using namespace std;
 
@@ -63,11 +66,45 @@ void dibujarRectangulo(int ancho, int largo, char caracter){
 	}
 }
 
+/*5. Hacer una funcion que retorne el area de un circulo,
+dicha funcion debera recibir el radio como parametro.
+Usando sobrecarga de funciones haga que la funcion pueda
+trabajar con numeros double o con numeros float.*/
+double areaCirculo(double radio){
+	return M_PI*pow(radio,2);
+}
+float areaCirculo(float radio){
+	return M_PI*pow(radio,2);
+}
 
+/*6. Escriba una función llamada minimo que retorne
+el menor de tres números, dicha funcion debera poder
+funcionar con tres numeros enteros o con
+tres numeros double o tres numeros float*/
 
-
-
-
+/*cuando tenemos sobrecarga de funciones y repetimos el mismo codigo
+en los metodos sobrecargados, se recomienda para optimizar el
+codigo definir el algorimo en la funcion que reciba el tipo de dato
+de mayor precision y mandar a llamar esta funcion desde los metodos
+con tipos de menor presicion.*/
+//double tiene mayor precision que int y float
+double minimo(double a, double b, double c){
+	if( a <= b && a <= c ) return a;
+	if( b <= a && b <= c ) return b;
+	if( c <= a && c <= b ) return c;
+}
+//reutilizar la de mayor precision en las otras dos:
+int minimo(int a, int b, int c){
+	//para evitar que la funcion se llame a si misma
+	//hay que pasar los valores hacia el tipo de dato de la funcion
+	//de mayor precision:
+	double x = a, y = b, z = c;
+	return minimo(x,y,z);
+}
+float minimo(float a, float b, float c){
+	double x = a, y = b, z = c;
+	return minimo(x,y,z);
+}
 
 
 
